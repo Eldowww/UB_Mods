@@ -15,6 +15,8 @@ class CfgPatches
 	    "asdg_jointrails",
 	    "hlcweapons_core",
 	    "hlcweapons_ar15",
+		"hlcweapons_aks",
+		"hlcweapons_G36",
 	    "A3_Weapons_F_Mark"
 	};
 	requiredVersion=0.1;
@@ -60,6 +62,7 @@ class CfgPatches
 			"hlc_rifle_honeybase_goldprint",
 			"hlc_rifle_honeybase_paisley",
 			"hlc_rifle_honeybase_skull",
+			"hlc_rifle_akm_aladeen",
 			"arifle_MX_Black_F_rubber",
 			"U_B_CombatUniform_Sigma",
 			"srifle_DMR_03_Punisher",
@@ -611,7 +614,33 @@ class cfgWeapons
  			"hlc_wp_g36\tex\placeholder\g36_ag36_co.paa"
  		};
  	};	
-		
+	class hlc_rifle_akm;
+	class hlc_rifle_akm_MTK;
+	class hlc_rifle_akm_aladeen: hlc_rifle_akm_MTK
+		{
+		dlc="Niarms_AK";
+		deployedPivot="deploypivot";
+		scope=2;
+		author="MrRifleman, Bull5hit, Toadie, Stiglitz";
+		model="\hlc_wp_ak\mesh\akm\akm.p3d";
+		picture="\hlc_wp_ak\tex\ui\gear_akm_x_ca";
+		hiddenSelections[]=
+		{
+			"Main",
+			"Dovetail",
+			"Mount"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\UB_Mods\UB_SND_TEX\textures\skins\AK-R\aladeen_akm.paa",
+			"hlc_wp_ak\tex\rifleman_ak74\mount_co.paa",
+			"hlc_wp_ak\tex\rrxviii_mtk83\mtk-83_co.paa"
+		};
+		displayName="Стрелок Пушка";
+		inertia=0.31;
+		dexterity=1.6092874;
+		aimTransitionSpeed=1.1265012;
+		};	
 	class arifle_MX_F;
 	class arifle_MX_Black_F_rubber: arifle_MX_F
     	{
