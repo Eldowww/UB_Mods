@@ -1,0 +1,23 @@
+
+#define _ARMA_
+
+ambient[] = {1,1,1,0};
+diffuse[] = {1,1,1,0};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,0};
+specular[] = {1,0,0,0};
+specularPower = 25;
+renderFlags[] = {"NoAlphaWrite"};
+PixelShaderID = "Glass";
+VertexShaderID = "Glass";
+class Stage1
+{
+	texture = "#(argb,8,8,3)color(1,1,1,0.9)";
+	uvSource = "none";
+};
+class Stage2
+{
+	texture = "A3\data_f\env_land_co.paa";
+	uvSource = "none";
+};
+
